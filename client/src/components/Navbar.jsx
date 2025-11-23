@@ -24,7 +24,7 @@ const Navbar = () => {
     </>
 
     return (
-        <div className="navbar bg-base-100 shadow-lg px-4 py-2 flex justify-between items-center dark:bg-gray-900 dark:text-white transition-colors duration-300">
+        <div className="navbar bg-base-100 shadow-lg px-2 md:px-4 py-2 flex justify-between items-center dark:bg-gray-900 dark:text-white transition-colors duration-300">
             <div className="navbar-start">
                 <div className="dropdown lg:hidden relative group">
                     <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -34,14 +34,17 @@ const Navbar = () => {
                         {navLinks}
                     </ul>
                 </div>
-                <Link to="/" className="btn btn-ghost text-xl font-bold">MovieMaster Pro</Link>
+                <Link to="/" className="btn btn-ghost text-base md:text-xl font-bold">
+                    <span className="hidden sm:inline">MovieMaster Pro</span>
+                    <span className="sm:hidden">MM Pro</span>
+                </Link>
             </div>
             <div className="navbar-center hidden lg:flex">
                 <ul className="menu menu-horizontal px-1 gap-6">
                     {navLinks}
                 </ul>
             </div>
-            <div className="navbar-end flex gap-4 items-center">
+            <div className="navbar-end flex gap-2 md:gap-4 items-center">
                 <button onClick={toggleTheme} className="btn btn-ghost btn-circle text-xl">
                     {theme === 'dark' ? <FaSun /> : <FaMoon />}
                 </button>
@@ -61,7 +64,7 @@ const Navbar = () => {
                 ) : (
                     <div className="flex gap-2">
                         <Link to="/login" className="btn btn-primary btn-sm">Login</Link>
-                        <Link to="/register" className="btn btn-outline btn-sm">Register</Link>
+                        <Link to="/register" className="btn btn-outline btn-sm hidden sm:inline-flex">Register</Link>
                     </div>
                 )}
             </div>

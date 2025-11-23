@@ -4,10 +4,10 @@ import { Link } from "react-router-dom";
 const Footer = () => {
     return (
         <footer className="bg-base-200 dark:bg-gray-900 text-base-content pt-10">
-            <div className="footer p-10 max-w-7xl mx-auto">
+            <div className="footer p-6 md:p-10 max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-8">
                 <aside>
-                    <h2 className="text-3xl font-bold text-primary">MovieMaster Pro</h2>
-                    <p className="font-medium">
+                    <h2 className="text-2xl md:text-3xl font-bold text-primary">MovieMaster Pro</h2>
+                    <p className="font-medium text-sm md:text-base">
                         Your ultimate destination for movie management.<br />
                         Organize, discover, and enjoy your collection.
                     </p>
@@ -33,11 +33,11 @@ const Footer = () => {
                     <a className="link link-hover">Cookie policy</a>
                 </nav>
             </div>
-            <div className="footer px-10 py-4 border-t bg-base-200 text-base-content border-base-300 dark:bg-gray-900 dark:border-gray-700 max-w-7xl mx-auto">
-                <aside className="items-center grid-flow-col">
-                    <p>Copyright © 2024 - All right reserved by MovieMaster Pro Industries Ltd</p>
+            <div className="footer px-4 md:px-10 py-4 border-t bg-base-200 text-base-content border-base-300 dark:bg-gray-900 dark:border-gray-700 max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-4">
+                <aside className="text-center md:text-left">
+                    <p className="text-xs md:text-sm">Copyright © 2024 - All rights reserved by MovieMaster Pro</p>
                 </aside>
-                <nav className="md:place-self-center justify-self-end">
+                <nav className="flex justify-center">
                     <div className="grid grid-flow-col gap-4 text-2xl">
                         <a href="#" className="hover:text-primary transition-colors"><FaTwitter /></a>
                         <a href="#" className="hover:text-primary transition-colors"><FaYoutube /></a>
