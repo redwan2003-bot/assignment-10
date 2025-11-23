@@ -14,7 +14,7 @@ const AllMovies = () => {
         const fetchMovies = async () => {
             setLoading(true);
             try {
-                let url = `http://localhost:5000/movies?`;
+                let url = `https://assignment-10-v5fr.vercel.app/movies?`;
                 if (search) url += `search=${search}&`;
                 if (genre) url += `genre=${genre}&`;
 

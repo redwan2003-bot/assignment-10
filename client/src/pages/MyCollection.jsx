@@ -20,7 +20,7 @@ const MyCollection = () => {
             // For this step, let's try to use a query param assuming we might add it, 
             // or just fetch all and filter. Let's fetch all and filter for safety since we didn't add generic filter in backend yet.
 
-            axios.get('http://localhost:5000/movies')
+            axios.get('https://assignment-10-v5fr.vercel.app/movies')
                 .then(res => {
                     const myMovies = res.data.filter(m => m.addedBy === user.email);
                     setMovies(myMovies);

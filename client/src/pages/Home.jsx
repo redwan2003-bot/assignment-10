@@ -14,11 +14,11 @@ const Home = () => {
         const fetchData = async () => {
             try {
                 // Fetch top rated
-                const topRatedRes = await axios.get('http://localhost:5000/movies?sort=-rating&limit=6');
+                const topRatedRes = await axios.get('https://assignment-10-v5fr.vercel.app/movies?sort=-rating&limit=6');
                 setFeaturedMovies(topRatedRes.data);
 
                 // Fetch recently added (assuming createdAt sort is default or we add it)
-                const recentRes = await axios.get('http://localhost:5000/movies?sort=-createdAt&limit=6');
+                const recentRes = await axios.get('https://assignment-10-v5fr.vercel.app/movies?sort=-createdAt&limit=6');
                 setRecentMovies(recentRes.data);
 
                 setLoading(false);

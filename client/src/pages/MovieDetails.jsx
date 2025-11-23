@@ -14,7 +14,7 @@ const MovieDetails = () => {
     const navigate = useNavigate();
 
     useEffect(() => {
-        axios.get(`http://localhost:5000/movies/${id}`)
+        axios.get(`https://assignment-10-v5fr.vercel.app/movies/${id}`)
             .then(res => {
                 setMovie(res.data);
                 setLoading(false);
@@ -27,7 +27,7 @@ const MovieDetails = () => {
 
     const handleDelete = () => {
         if (window.confirm("Are you sure you want to delete this movie?")) {
-            axios.delete(`http://localhost:5000/movies/${id}`)
+            axios.delete(`https://assignment-10-v5fr.vercel.app/movies/${id}`)
                 .then(() => {
                     toast.success("Movie Deleted Successfully");
                     navigate('/all-movies');

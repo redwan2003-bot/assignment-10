@@ -13,7 +13,7 @@ const UpdateMovie = () => {
     const [formData, setFormData] = useState(null);
 
     useEffect(() => {
-        axios.get(`http://localhost:5000/movies/${id}`)
+        axios.get(`https://assignment-10-v5fr.vercel.app/movies/${id}`)
             .then(res => {
                 setFormData(res.data);
                 setLoading(false);
@@ -54,7 +54,7 @@ const UpdateMovie = () => {
             return;
         }
 
-        axios.put(`http://localhost:5000/movies/${id}`, movieData)
+        axios.put(`https://assignment-10-v5fr.vercel.app/movies/${id}`, movieData)
             .then(res => {
                 if (res.data._id) {
                     toast.success('Movie Updated Successfully');

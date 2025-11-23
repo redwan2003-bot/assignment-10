@@ -37,7 +37,7 @@ const AddMovie = () => {
             return;
         }
 
-        axios.post('http://localhost:5000/movies', movieData)
+        axios.post('https://assignment-10-v5fr.vercel.app/movies', movieData)
             .then(res => {
                 if (res.data._id) {
                     toast.success('Movie Added Successfully');
