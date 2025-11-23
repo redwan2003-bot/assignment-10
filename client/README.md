@@ -1,6 +1,6 @@
 # MovieMaster Pro
 
-**Live Site:** [https://moviemaster-pro.web.app](https://moviemaster-pro.web.app) (Example URL)
+**Live Site:** https://assignment10-6a911.web.app/
 
 MovieMaster Pro is a comprehensive movie management system where users can browse, manage, and organize their favorite movies with advanced filtering and personal collections.
 
